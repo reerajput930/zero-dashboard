@@ -1,0 +1,10 @@
+.bar--block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: -webkit-fill-available;
+}
+.bar--block h2{
+    margin: 50px 0px 50px 0px;
+}
