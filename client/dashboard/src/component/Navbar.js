@@ -138,7 +138,8 @@ export default function Navbar() {
             <Link to={"/barchart"}>
               <li className=" font-small text-lg mb-3 hover:bg-[#e6effc] pt-[14px] pb-[14px] pl-[15px]  rounded-md"
                 id="class4"
-                onClick={(e)=> highlight(e,e.target.id)}>
+                // onClick={(e)=> highlight(e,e.target.id)}
+               >
                 <FontAwesomeIcon className="mr-3" icon={faChartBar} /> BarChart
               </li>
             </Link>
