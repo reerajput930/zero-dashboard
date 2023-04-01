@@ -21,7 +21,7 @@ export default function Tasks() {
   useEffect(() => {
     async function fetchAllTasks() {
       //   // e.preventDefault();
-      const response = await fetch("http://localhost:5000/api/alltasks");
+      const response = await fetch("https://mern-backend-cdsb.onrender.com/api/alltasks");
 
       const data = await response.json();
 
@@ -38,7 +38,7 @@ export default function Tasks() {
     fetchAllTasks();
   }, []);
   async function updateTasks(task) {
-    const response = await fetch("http://localhost:5000/api/update", {
+    const response = await fetch("https://mern-backend-cdsb.onrender.com/api/update", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -77,7 +77,7 @@ export default function Tasks() {
 
   async function del(e, taskId) {
     // console.log(taskId)
-    const response = await fetch("http://localhost:5000/api/delete", {
+    const response = await fetch("https://mern-backend-cdsb.onrender.com/api/delete", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

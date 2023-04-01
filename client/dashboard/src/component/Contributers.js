@@ -5,6 +5,7 @@ import { faFaceSmile, faMessage, searching } from "@fortawesome/free-regular-svg
 
 
 
+
 export default function Contributers(){
   const [users,setUsers] = useState({})
   const [filterUsers,setFilterUsers] = useState({})
@@ -14,7 +15,7 @@ export default function Contributers(){
 
   useEffect(()=> {
   async function fetchAllUsers(){
-    const response = await fetch("http://localhost:5000/api/allusers")
+    const response = await fetch(`https://mern-backend-cdsb.onrender.com/api/allusers`)
     const data = await response.json();
 
     if(data.status === "success"){

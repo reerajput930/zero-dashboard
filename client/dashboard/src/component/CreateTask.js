@@ -14,7 +14,7 @@ export default function CreateTask() {
   async function submitted(e) {
     e.preventDefault();
     console.log(task)
-    const response = await fetch("http://localhost:5000/api/addtask", {
+    const response = await fetch("https://mern-backend-cdsb.onrender.com/api/addtask", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

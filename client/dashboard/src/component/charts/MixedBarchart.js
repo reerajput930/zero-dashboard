@@ -32,7 +32,7 @@ export default function MixedBarchart() {
   useEffect(() => {
     async function fetchAllTasks() {
       //   // e.preventDefault();
-      const response = await fetch("http://localhost:5000/api/alltasks");
+      const response = await fetch("https://mern-backend-cdsb.onrender.com/api/alltasks");
 
       const data = await response.json();
 
