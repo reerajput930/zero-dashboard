@@ -11,6 +11,8 @@ import MixBarchart from "./component/charts/MixedBarchart";
 import Contributers from "./component/Contributers";
 import Register from "./component/Register";
 import Login from "./component/Login";
+import UserInfo from "./component/UserInfo";
+import Testing from "./component/Testing";
 import { useAuthContext } from "./hooks/useAuthContext";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -48,6 +50,8 @@ export default function App() {
         </>
       )}
       <Routes>
+        <Route path="/testing" element={<Testing/>}/>
+        <Route path="/userinfo" element={<UserInfo/>}/>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contributers" element={<Contributers />} />

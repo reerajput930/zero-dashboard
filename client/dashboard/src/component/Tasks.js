@@ -30,7 +30,7 @@ export default function Tasks() {
         console.log(data.tasks);
         console.log("-----------------")
         setStoreTasks({ tasks: data.tasks });
-        // console.log(storeTasks);
+        console.log(storeTasks);
       } else {
         console.log("error in fetching data from api");
       }
@@ -89,7 +89,7 @@ export default function Tasks() {
 
     window.location.reload();
   }
-
+   console.log(storeTasks)
   storeTasks.tasks.map((task) => {
     console.log(task._id);
     tasks[task.category].push(

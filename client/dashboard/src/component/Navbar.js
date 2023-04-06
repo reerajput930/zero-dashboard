@@ -68,11 +68,21 @@ export default function Navbar() {
               <>
                 {console.log(user)}
                 <li className=" font-small  mt-10 text-lg m-4  mb-1 ">
-                  <span className="mr-2">{user.firstName}</span>
-                  <span>{user.lastName}</span>
+                  <Link to={"/userinfo"}>
+                    <span className="mr-2 cursor-pointer">
+                      {user.firstName}
+                    </span>
+                  </Link>
+                  <Link to={"/userinfo"}>
+                    <span className=" cursor-pointer">{user.lastName}</span>
+                  </Link>
                 </li>
 
-                <li className=" font-small text-lg m-4 mt-0 ">{user.email}</li>
+                <Link to={"/userinfo"}>
+                  <li className="cursor-pointer font-small text-lg m-4 mt-0 ">
+                    {user.email}
+                  </li>
+                </Link>
               </>
             )}
 
@@ -140,7 +150,6 @@ export default function Navbar() {
 
                 // onClick={(e) => highlight(e, e.target.id)}
               >
-
                 <FontAwesomeIcon className="mr-3" icon={faChartBar} /> BarChart
               </li>
             </Link>
