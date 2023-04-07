@@ -57,12 +57,12 @@ export default function Login() {
   return (
     <div className="register--section  w-[-webkit-fill-available] flex flex-col  items-center rounded-md ">
       <h1 className="font-bold  text-2xl mt-16 mb-10">LOGIN HERE!</h1>
-      <form className="w-[-webkit-fill-available]  ml-28 bg-white p-10 mr-28 mb-20 shadow-lg">
+      <form className=" w-[80%] flex flex-col justify-center items-center  rounded-lg login--form text-white ml-28 bg-white p-20 mr-28 mb-20 shadow-lg">
       {<div className="mb-4 font-medium text-red-700">{error}</div>}
         {/* email */}
-        <label className="block font-medium">Email</label>
+        <label className="block font-medium text-left w-[100%] ">Email</label>
         <input
-          className="border-gray-300 border-2 w-[70%] rounded-md h-10  mb-8 mt-2 p-4"
+          className="border-gray-300 border-2 rounded-md h-10  mb-8 mt-2 p-4 outline-none border-none text-black text-left w-[100%]"
           type="email"
           value={userDetail.email.toLowerCase()}
           onChange={(e) =>
@@ -71,9 +71,9 @@ export default function Login() {
         />
 
         {/* password */}
-        <label className="block font-medium">Password</label>
+        <label className="block font-medium text-left w-[100%]">Password</label>
         <input
-          className="border-gray-300 border-2 w-[70%] rounded-md h-10  mb-8 mt-2 p-4"
+          className="border-gray-300 border-2 rounded-md h-10  mb-8 mt-2 p-4  outline-none border-none text-black text-left w-[100%]"
           type="password"
           value={userDetail.password}
           onChange={(e) =>
@@ -84,7 +84,7 @@ export default function Login() {
         <button
           onClick={submitted}
           type="submit"
-          className="bg-[#0091D5] text-white font-medium hover:bg-[#1C4E80] p-2 rounded-lg mt-14 mb-2 block w-[70%]"
+          className="bg-[#25007c] text-white font-medium  hover:bg-blue-400 hover:text-[#25007c]  p-2 rounded-lg mt-14 mb-2 block  w-[100%]"
         >
           SUBMIT
         </button>

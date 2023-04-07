@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
+import img from "../icon/backgrounduserprofile.jpg"
 
 export default function UserInfo() {
   
@@ -16,7 +17,7 @@ export default function UserInfo() {
     async function fetchUserData() {
       // console.log(user.email)
       const response = await fetch(
-        `http://localhost:5000/api/userdata/${localstorageUser.email}`,
+        `https://mern-backend-cdsb.onrender.com/api/userdata/${localstorageUser.email}`,
         {
           method: "GET",
           headers: {
@@ -40,21 +41,25 @@ export default function UserInfo() {
     console.log("hellow dear");
   }, []);
 
-  async function Update() {
-    const response = await fetch(`http://localhost:5000/api/updatedata`, {
+  async function Update(e) {
+    e.preventDefault()
+    console.log(userDetail)
+    const response = await fetch(`https://mern-backend-cdsb.onrender.com/api/updatedata`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(userDetail),
     });
-    window.location.href = "/userinfo";
+    alert("UPDATED SUCCESSFULLY!")
+    
   }
 
   return (
     <div className="register--section  w-[-webkit-fill-available] flex flex-col  items-center rounded-md ">
       <h1 className="font-bold  text-2xl mt-16 mb-10">USER PROFILE!</h1>
-      <form className="w-[-webkit-fill-available]  ml-28 bg-white p-10 mr-28 mb-20 shadow-lg">
+      
+      <form className=" userInfo-form w-[-webkit-fill-available] ml-28 p-10 mr-28 mb-20 shadow-lg">
         {/* {<div className="mb-4 font-medium text-red-700">{error}</div>} */}
 
         {/* profile photo */}
