@@ -25,7 +25,7 @@ const registerationStructure = mongoose.Schema({
     userdesc: String,
     status: {
       type: String,
-      
+       require: true
     },
     password: {
       type: String,
