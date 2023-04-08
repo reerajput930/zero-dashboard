@@ -108,7 +108,7 @@ export default function Tasks() {
         onDragStart={(e) => dragStart(e, task._id)}
         draggable
         key={task._id}
-        className="task--detail "
+        className="task--detail cursor-pointer "
         // style={{ backgroundColor: task.bgcolor }}
       >
         {/* <h3>{task.taskNo}</h3> */}

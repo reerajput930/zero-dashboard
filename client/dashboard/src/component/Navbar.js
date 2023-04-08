@@ -71,9 +71,10 @@ export default function Navbar() {
             {/* <h3 className=" mt-20 mb-4 text-gray-400 "></h3> */}
 
             {user && (
-              <>
+              <> 
+              <h3 className=" mt-16 mb-2 text-gray-400 ">USER PROFILE</h3>
                 {console.log(user)}
-                <li className=" font-small  mt-10 text-lg m-4  mb-1 ">
+                <li className=" font-small  mt-5 text-base m-4  mb-1 ">
                   <Link to={"/userinfo"}>
                     <span className="mr-2 cursor-pointer">
                       {user.firstName}
@@ -85,7 +86,7 @@ export default function Navbar() {
                 </li>
 
                 <Link to={"/userinfo"}>
-                  <li className="cursor-pointer font-small text-lg m-4 mt-0 ">
+                  <li className="cursor-pointer font-small text-base m-4 mt-0 ">
                     {user.email}
                   </li>
                 </Link>
