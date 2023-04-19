@@ -139,7 +139,7 @@ export default function Navbar() {
             </Link>
 
             <h3 className=" mt-5 mb-4 text-gray-400">REMINDER AND EVENTS</h3>
-            <Link to={"#"}>
+            <Link to={"/calender"}>
               <li
                 className="  mb-8 font-small text-lg  mt-1  hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px] rounded-md"
                 id="class3"
