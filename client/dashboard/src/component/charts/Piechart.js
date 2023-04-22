@@ -1,6 +1,8 @@
 import React, { PureComponent, useEffect, useState ,useCallback} from "react";
 import { PieChart, Pie, Sector, Cell, Tooltip } from "recharts";
 // import './Piechart.css'
+import { Audio,Circles,ThreeDots } from "react-loader-spinner";
+
 
 export default function Piechart() {
   const [tagsdata, setTagsData] = useState([]);
@@ -18,7 +20,7 @@ export default function Piechart() {
   useEffect(() => {
     async function fetchAllTasks() {
       //   // e.preventDefault();
-      const response = await fetch("http://localhost:5000/api/alltasks");
+      const response = await fetch("https://mern-backend-cdsb.onrender.com/api/alltasks");
 
       const data = await response.json();
 
@@ -156,8 +158,20 @@ export default function Piechart() {
   
 
   return (
-    <div className="w-full flex justify-center items-center flex-col ">
-      <h2 className="mt-10 text-3xl font-medium text-center  " >Piechart Representation of Tech stack used!</h2>
+    <div className="w-full flex  items-center flex-col ">
+      <h2 className="mt-16 text-3xl font-medium text-center  " >Piechart Representation of Tech stack used!</h2>
+     
+      {!loading &&  <ThreeDots
+      
+          height="300"
+          width="80"
+          radius="9"
+          color="blue"
+          
+          ariaLabel="loading"
+          wrapperStyle
+          wrapperClass
+        />}
     <PieChart  width={1050} height={600}>
     <Pie
       className="w-full"

@@ -29,13 +29,16 @@ export default function Register() {
 
   async function submitted(e) {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(userDetail),
-    });
+    const response = await fetch(
+      "https://mern-backend-cdsb.onrender.com/api/signup",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userDetail),
+      }
+    );
     const data = await response.json();
 
     if (!response.ok) {
@@ -49,7 +52,7 @@ export default function Register() {
       // nd change the global state in context
       // update the auth context
       dispatch({ type: "LOGIN", payload: data });
-      window.location.href = '/tasks';
+      window.location.href = "/tasks";
     }
 
     setUserDetail({
@@ -63,13 +66,16 @@ export default function Register() {
       image: "",
     });
   }
-  
 
   return (
     <div className="register--section  w-[-webkit-fill-available] flex flex-col  items-center rounded-md ">
       <h1 className="font-bold  text-2xl mt-16 mb-10">REGISTER HERE!</h1>
-      <form className="w-[-webkit-fill-available]  ml-28 bg-white p-10 mr-28 mb-20 shadow-lg">
-        {<div className="mb-4 font-medium text-red-700">{error}</div>}
+      <form className=" flex flex-col items-center w-[80%] rounded-lg register--form text-white  ml-28 bg-white p-20 mr-28 mb-20 shadow-lg">
+        {
+          <div className="mb-4  font-medium text-left w-[100%] text-red-700">
+            {error}
+          </div>
+        }
 
         {/* profile photo */}
         <FileBase64
@@ -81,29 +87,41 @@ export default function Register() {
         />
 
         {/* first name */}
-        <label className="block font-medium mt-9 ">First Name</label>
+        <label className="block  font-medium text-left w-[100%]  mt-10">
+          First Name <span>*</span>{" "}
+        </label>
         <input
-          className="border-gray-300 border-2 w-[70%] rounded-md h-10 mb-8 mt-2 p-4"
+          className="border-gray-300 border-2   w-[100%] rounded-md h-10 mb-8 mt-2   p-4  outline-none border-none text-black"
           value={userDetail.firstName}
           onChange={(e) =>
-            setUserDetail({ ...userDetail, firstName: e.target.value.toUpperCase() })
+            setUserDetail({
+              ...userDetail,
+              firstName: e.target.value.toUpperCase(),
+            })
           }
         />
 
         {/* last name */}
-        <label className="block font-medium">Last Name</label>
+        <label className="block  font-medium text-left w-[100%]">
+          Last Name{" "}
+        </label>
         <input
-          className="border-gray-300 border-2 w-[70%] rounded-md h-10  mb-8 mt-2 p-4"
+          className="border-gray-300 border-2   w-[100%] rounded-md h-10  mb-8 mt-2   p-4  outline-none border-none text-black"
           value={userDetail.lastName}
           onChange={(e) =>
-            setUserDetail({ ...userDetail, lastName: e.target.value.toUpperCase() })
+            setUserDetail({
+              ...userDetail,
+              lastName: e.target.value.toUpperCase(),
+            })
           }
         />
 
         {/* email */}
-        <label className="block font-medium">Email</label>
+        <label className="block  font-medium text-left w-[100%]">
+          Email<span>*</span>{" "}
+        </label>
         <input
-          className="border-gray-300 border-2 w-[70%] rounded-md h-10  mb-8 mt-2 p-4"
+          className="border-gray-300 border-2   w-[100%] rounded-md h-10  mb-8 mt-2   p-4  outline-none border-none text-black"
           type="email"
           value={userDetail.email.toLowerCase()}
           onChange={(e) =>
@@ -111,9 +129,11 @@ export default function Register() {
           }
         />
 
-        <label className="block font-medium">Linkedin ID</label>
+        <label className="block  font-medium text-left w-[100%]">
+          Linkedin ID<span>*</span>{" "}
+        </label>
         <input
-          className="border-gray-300 border-2 w-[70%] rounded-md h-10  mb-8 mt-2 p-4"
+          className="border-gray-300 border-2   w-[100%] rounded-md h-10  mb-8 mt-2   p-4  outline-none border-none text-black"
           type="url"
           value={userDetail.linkedin}
           onChange={(e) =>
@@ -122,23 +142,28 @@ export default function Register() {
         />
 
         {/* password */}
-        <label className="block font-medium">Password</label>
+        <label className="block  font-medium text-left w-[100%]">
+          Password<span>*</span>{" "}
+        </label>
         <input
-          className="border-gray-300 border-2 w-[70%] rounded-md h-10  mb-8 mt-2 p-4"
+          className="border-gray-300 border-2   w-[100%] rounded-md h-10 mt-2   p-4  outline-none border-none text-black"
           type="password"
           value={userDetail.password}
           onChange={(e) =>
             setUserDetail({ ...userDetail, password: e.target.value })
           }
         />
+        <p className="text-xs  mb-8 mt-2">Password should include : Digit ,Uppercase  Lowercase Alphabet and an Expression (min 8 character)</p>
 
         <select
-          className="block border-black rounded-md mb-8 border-2 w-[70%] p-2"
+          className="block text-black outline-none border-none border-black rounded-md mb-8 border-2   w-[100%] p-2"
           onClick={(e) =>
             setUserDetail({ ...userDetail, status: e.target.value })
           }
         >
-          <option value="Status">Status</option>
+          <option value="Status">
+            Status <span>*</span>{" "}
+          </option>
           <option value="Contributer">contributer</option>
           <option value="Team Lead">Team Lead</option>
           <option value="Full Stack Developer">Full Stack Developer</option>
@@ -149,9 +174,11 @@ export default function Register() {
         </select>
 
         {/* userdesc */}
-        <label className="block font-medium">A Little bit about u!</label>
+        <label className="block  font-medium text-left w-[100%]">
+          A Little bit about u!
+        </label>
         <input
-          className="border-gray-300 border-2 w-[70%] rounded-md h-10  mb-8 mt-2 p-4"
+          className="border-gray-300 border-2   w-[100%] rounded-md h-10  mb-8 mt-2   p-4  outline-none border-none text-black"
           value={userDetail.userdesc}
           onChange={(e) =>
             setUserDetail({ ...userDetail, userdesc: e.target.value })
@@ -161,7 +188,7 @@ export default function Register() {
         <button
           onClick={submitted}
           type="submit"
-          className="bg-[#0091D5] text-white font-medium hover:bg-[#1C4E80] p-2 rounded-lg mt-14 mb-2 block w-[70%]"
+          className="bg-[#25007c] text-white  font-medium w-[100%] hover:bg-blue-400 hover:text-[#25007c] p-2 rounded-lg mt-10 mb-2 block "
         >
           SUBMIT
         </button>

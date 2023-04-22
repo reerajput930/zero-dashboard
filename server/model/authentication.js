@@ -19,13 +19,13 @@ const registerationStructure = mongoose.Schema({
     }, 
     linkedin: {
       type: String, 
-      // require: true,
+      require: true,
       
     },
     userdesc: String,
     status: {
       type: String,
-      require: true,
+       require: true
     },
     password: {
       type: String,
