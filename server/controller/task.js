@@ -16,6 +16,34 @@ const alltasks =async (req,res)=>{
         
 }
 
+// creating api for fetching single data
+const singletask = async (req,res)=>{
+    console.log(req.params.id)
+    try {
+        const task = await taskModel.findById({"_id":req.params.id})
+        res.status(200).json({ status: "success", task: task })
+        
+    } catch (error) {
+        console.log(error.message)
+        res.status(404).json({status:"failed"})
+    }
+}
+
+// updating api for single task
+const singleupdate = async(req,res)=>{
+    const {taskDesc,tags} = req.body
+    console.log(req.body)
+    try {
+        const task = await taskModel.findByIdAndUpdate({"_id":req.params.id},{taskDesc:taskDesc , tags :tags})
+        res.status(200).json({status:"success"})
+        
+    } catch (error) {
+        console.log(error.message)
+        res.status(404).json({status:"failed"})
+    }
+}
+
+
 //  creating api for adding task 
 const addtask =async (req,res)=>{
     try {
@@ -74,6 +102,8 @@ const descupdate =async(req,res)=>{
 
 module.exports ={
     alltasks,
+    singletask,
+    singleupdate,
     addtask,
     updatetask,
     deletetask,

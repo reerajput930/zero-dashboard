@@ -5,6 +5,8 @@ const userModel = require("../model/authentication");
 const { login, signup, allusers } = require("../controller/user");
 const {
   alltasks,
+  singletask,
+  singleupdate,
   addtask,
   updatetask,
   deletetask,
@@ -21,6 +23,8 @@ router.get("/allusers", allusers);
 
 // ================= TASK MANAGER CRUD OPERTION =================
 router.get("/alltasks", alltasks);
+router.get("/singletask/:id",singletask);
+router.put("/singleupdate/:id",singleupdate);
 router.post("/addtask", addtask);
 router.put("/update", updatetask);
 router.delete("/delete", deletetask);
