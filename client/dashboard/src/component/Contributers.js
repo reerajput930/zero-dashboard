@@ -136,7 +136,7 @@ export default function Contributers() {
   }
 
   return (
-    <div className="flex flex-col  w-[-webkit-fill-available] items-center">
+    <div className="contMainDIV flex flex-col  w-[-webkit-fill-available] items-center">
       <div className="search--block flex flex-col  w-[-webkit-fill-available] items-center">
         <input
           type="text"
