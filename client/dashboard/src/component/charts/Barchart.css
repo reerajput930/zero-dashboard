@@ -8,3 +8,11 @@
 .bar--block h2{
     margin: 50px 0px 50px 0px;
 }
+
+
+
+@media screen and (max-width: 1230px) and (min-width: 400px) {
+    .bar--block {
+        margin-top: 100px;
+    }
+}

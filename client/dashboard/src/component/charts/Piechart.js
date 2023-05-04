@@ -1,6 +1,6 @@
 import React, { PureComponent, useEffect, useState ,useCallback} from "react";
 import { PieChart, Pie, Sector, Cell, Tooltip } from "recharts";
-// import './Piechart.css'
+import './Piechart.css'
 import { Audio,Circles,ThreeDots } from "react-loader-spinner";
 
 
@@ -158,7 +158,7 @@ export default function Piechart() {
   
 
   return (
-    <div className="w-full flex  items-center flex-col ">
+    <div className=" pie w-full flex  items-center flex-col " id="pie">
       <h2 className="mt-16 text-3xl font-medium text-center  " >Piechart Representation of Tech stack used!</h2>
      
       {!loading &&  <ThreeDots

@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 // import Loader from "./Loader";
 import { Audio,Circles,ThreeDots } from "react-loader-spinner";
+import './Contributor.css'
 
 export default function Contributers() {
   const [users, setUsers] = useState({});

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
 import img from "../icon/backgrounduserprofile.jpg";
 import { ThreeDots } from "react-loader-spinner";
+import './userInfo.css';
 
 export default function UserInfo() {
   const [userDetail, setUserDetail] = useState({});
