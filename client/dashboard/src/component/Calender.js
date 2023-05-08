@@ -3,7 +3,7 @@ import daygridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import { useState, useEffect } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
@@ -42,6 +42,8 @@ export const MyCalendar = () => {
     setSelectedInfo(info);
     setShowModal(true);
   };
+
+  
 
   const handleModalClose = () => {
     setShowModal(false);
@@ -183,7 +185,7 @@ export const MyCalendar = () => {
   }
 
   return (
-    <div>
+    <div style={{width: "-webkit-fill-available",margin:"1em",marginTop:"50px"}}>
       <FullCalendar
         editable
         selectable
