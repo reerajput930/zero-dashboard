@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 // import Loader from "./Loader";
 import { Audio,Circles,ThreeDots } from "react-loader-spinner";
+import './Contributor.css'
 
 export default function Contributers() {
   const [users, setUsers] = useState({});
@@ -136,7 +137,7 @@ export default function Contributers() {
   }
 
   return (
-    <div className="flex flex-col  w-[-webkit-fill-available] items-center">
+    <div className="contMainDIV flex flex-col  w-[-webkit-fill-available] items-center">
       <div className="search--block flex flex-col  w-[-webkit-fill-available] items-center">
         <input
           type="text"
