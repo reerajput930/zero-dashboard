@@ -218,9 +218,9 @@ export default function Navbar() {
         onToggle={(toggled) => {
           if (toggled) {
             // console.log(isClose);
-            setClose(false);
-          } else {
             setClose(true);
+          } else {
+            setClose(false);
             // console.log(isClose);
             // close a menu
           }
