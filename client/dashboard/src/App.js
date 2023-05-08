@@ -7,6 +7,7 @@ import Piechart from "./component/charts/Piechart";
 import Barchart from "./component/charts/Barchart";
 import Navbar from "./component/Navbar";
 import EditPropress from "./component/EditProgress"
+import Calender from "./component/Calender"
 import MixBarchart from "./component/charts/MixedBarchart";
 import Contributers from "./component/Contributers";
 import Register from "./component/Register";
@@ -50,6 +51,7 @@ export default function App() {
         </>
       )}
       <Routes>
+        <Route path="/calender" element={<Calender/>}  />
         <Route path="/testing" element={<Testing/>}/>
         <Route path="/userinfo" element={<UserInfo/>}/>
         <Route path="/register" element={<Register />} />
