@@ -48,7 +48,7 @@
     margin-top: 17px;
   }
 
-  .progress {
+  .growth {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,11 +57,11 @@
     margin-top: -30px;
   }
 
-  .progress a {
+  .growth a {
     margin-top: -39px;
   }
 
-  .progress li {
+  .growth li {
     text-align: center;
     margin-top: 17px;
   }
