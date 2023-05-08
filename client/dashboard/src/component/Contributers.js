@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 // import Loader from "./Loader";
 import { Audio,Circles,ThreeDots } from "react-loader-spinner";
+import './Contributor.css'
 
 export default function Contributers() {
   const [users, setUsers] = useState({});
@@ -108,13 +109,13 @@ export default function Contributers() {
               />
             </div>
             <div className="detail--block flex flex-col justify-center ml-4 mr-8">
-              <h2 className="name text-lg font-bold">
+              <h3 className="name text-lg font-bold">
                 {user.firstName} {user.lastName}
-              </h2>
+              </h3>
               <h2 className="status text-sm">{user.status}</h2>
             </div>
           </div>
-          <p className="ml-7 m-3 mt-5 text-sm">{user.userdesc} </p>
+          <p className="ml-7 m-3 mb-2 mt-3 text-sm">{user.userdesc} </p>
           <div className="btn--section border-t-4 border-[#fafbfb] flex justify-evenly">
             <div className=" w-full text-center p-3 border-r-4 border-[#fafbfb] cursor-pointer hover:bg-[#0091D5] hover:text-white font-semibold rounded-bl-md">
               <FontAwesomeIcon className="mr-2" icon={faMessage} />{" "}
@@ -136,13 +137,13 @@ export default function Contributers() {
   }
 
   return (
-    <div className="flex flex-col  w-[-webkit-fill-available] items-center">
+    <div className="contMainDIV flex flex-col  w-[-webkit-fill-available] items-center">
       <div className="search--block flex flex-col  w-[-webkit-fill-available] items-center">
         <input
           type="text"
           onChange={searching}
           id="search"
-          className=" inline w-[60%]   h-14 outline-none mt-20 p-5 pt-[15px] rounded-xl shadow-lg"
+          className=" inline w-[60%]   h-[70px] outline-none mt-20 p-3 pt-[15px] rounded-xl shadow-lg"
           placeholder="Search for contributer's name... "
         />
         {/* <span><FontAwesomeIcon className="mr-2" icon={faFaceSmile} /></span> */}

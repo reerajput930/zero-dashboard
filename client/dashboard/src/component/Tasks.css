@@ -80,3 +80,17 @@
     text-decoration: line-through;
 
 }
+
+
+@media screen and (max-width: 1230px) and (min-width: 400px) {
+    
+
+.taskmanger--block {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: -webkit-fill-available;
+    margin-top: 97px;
+}
+}

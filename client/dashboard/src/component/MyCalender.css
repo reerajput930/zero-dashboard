@@ -1,0 +1,114 @@
+.btn{
+    margin-right: 5px;
+    border-radius: 10px;
+}
+.event-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  
+  .event-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 10px;
+    font-size: 18px; 
+    color: "black"
+  }
+  
+  .icon-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .icon-container svg {
+    font-size: 1.2rem; 
+    margin-right: 1px; 
+  }
+  .icon-container > * {
+    margin-left: 10px;
+  }
+  .modalOne .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .delIcon {
+    margin-left: auto;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .event-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .event-title {
+      font-size: 11px;
+      padding-bottom: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-right: 10px;
+  
+
+    }
+  
+    .icon-container {
+      margin-top: 10px;
+    }
+  
+    .icon-container > * {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+  .icon-container svg {
+    font-size: 0.8rem; 
+    margin-right: 1px; 
+  }
+  
+  @media (min-width:700px) and (max-width: 1400px) {
+    .event-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 2px;
+      justify-content: space-between;
+    
+    }
+  
+    .event-title {
+      font-size: 15px;
+      padding-bottom: 1px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-right: 8px;
+  
+
+    }
+  
+    .icon-container {
+      margin-top: 1px;
+    }
+  
+    .icon-container > * {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+  .icon-container svg {
+    font-size: 1rem; 
+    margin-right: 1px; 
+  }
+  
+/* Modal One Styles */
+
+
+  

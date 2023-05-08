@@ -1,0 +1,15 @@
+.userInfo-form{
+    display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+
+@media screen and (max-width: 1230px) and (min-width: 400px) {
+    .userInfo-form{
+        display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    }
+}
