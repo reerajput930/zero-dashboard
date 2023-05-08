@@ -9,6 +9,7 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { useAuthContext } from "../hooks/useAuthContext";
 import img from "../icon/pieChart.png";
 import "../index.css";
+import './NavBar.css';
 
 
 import logoImg from "../icon/image.png";
@@ -58,8 +59,9 @@ export default function Navbar() {
             </h3>
         </>
       ) : (
-        <nav className="w-[310px]">
+        <nav className="nav w-[310px]">
           <ul className="navbar--ul p-7 text-white h-full  shadow-2xl "  >
+          <div className="zero"> 
             {/* <span> <img src={logoImg} className="h-20 inline" /> </span> */}
             <h3 className=" font-extrabold text-4xl inline-block ml-3 text-blue-300 relative top-2">
               ZE
@@ -67,11 +69,13 @@ export default function Navbar() {
             <h3 className=" font-extrabold text-4xl inline-block text-red-600 relative top-2">
               RO
             </h3>
-
+            </div>
+    
             {/* <h3 className=" mt-20 mb-4 text-gray-400 "></h3> */}
 
             {user && (
               <> 
+              <div className="user--info">
               <h3 className=" mt-16 mb-2 text-gray-400 ">USER PROFILE</h3>
                 {console.log(user)}
                 <li className=" font-small  mt-5 text-base m-4  mb-1 ">
@@ -90,6 +94,7 @@ export default function Navbar() {
                     {user.email}
                   </li>
                 </Link>
+                </div>
               </>
             )}
 
@@ -106,7 +111,9 @@ export default function Navbar() {
                   /
                 </span>
 
+
                 {/* login/signin means user has already register , put your credential and enter into application */}
+               
                 <Link to={"/login"}>
                   <li className=" font-small text-sm mb-8 m-4 ml-2 mt-1 inline  hover:bg-[#e6effc]">
                     <FontAwesomeIcon className="mr-1" icon={faUser} /> LOGIN{" "}
@@ -115,8 +122,9 @@ export default function Navbar() {
               </>
             )}
 
+<div className="dashboard">
             <h3 className=" mt-5 mb-4 text-gray-400 ">DASHBOARD</h3>
-
+           
             <Link to={"/contributers"}>
               <li
                 className="  font-small  text-lg mb-8 m-0 mt-1 hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px] rounded-md"
@@ -125,7 +133,9 @@ export default function Navbar() {
                 <FontAwesomeIcon className="mr-3" icon={faUser} /> Contributer{" "}
               </li>
             </Link>
+            </div>
 
+            <div className="progress">
             <h3 className=" mt-5 mb-4 text-gray-400 ">PROGRESS REPORT</h3>
 
             <Link to={"/tasks"}>
@@ -137,7 +147,9 @@ export default function Navbar() {
                 <FontAwesomeIcon className="mr-3" icon={faClipboard} /> Progress
               </li>
             </Link>
-
+            </div>
+            
+            <div className="calender">
             <h3 className=" mt-5 mb-4 text-gray-400">REMINDER AND EVENTS</h3>
             <Link to={"/calender"}>
               <li
@@ -148,9 +160,11 @@ export default function Navbar() {
                 <FontAwesomeIcon className="mr-3" icon={faCalendar} /> Calender
               </li>
             </Link>
+            </div>
 
+             <div className="charts">
             <h3 className=" mt-5 mb-4 text-gray-400">CHARTS</h3>
-            <Link to={"/barchart"}>
+            <Link   className="bar" to={"/barchart"}>
               <li
                 className=" font-small text-lg mb-3 hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px]  rounded-md"
                 id="class4"
@@ -161,7 +175,7 @@ export default function Navbar() {
               </li>
             </Link>
 
-            <Link to={"/piechart"}>
+            <Link className="pie" to={"/piechart"}>
               <li
                 className=" font-small text-lg mb-3 mt-1  hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px]  rounded-md"
                 id="class5"
@@ -171,7 +185,7 @@ export default function Navbar() {
               </li>
             </Link>
 
-            <Link to={"/mixbarchart"}>
+            <Link className="mix" to={"/mixbarchart"}>
               <li
                 className=" font-small text-lg mb-3    hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px] rounded-md"
                 id="class6"
@@ -181,12 +195,13 @@ export default function Navbar() {
                 MixBarChart
               </li>
             </Link>
+            </div>
 
             {/* ------------ if user detail is present (login) --------------------- */}
             {user && (
-              <li
+              <li 
                 onClick={handleLogout}
-                className=" cursor-pointer ffont-small text-lg  mt-1  hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px] rounded-md "
+                className="logout cursor-pointer ffont-small text-lg  mt-1  hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px] rounded-md "
               >
                 LOGOUT
               </li>
@@ -195,15 +210,15 @@ export default function Navbar() {
         </nav>
       )}
 
-      <Hamburger
+      <Hamburger className="ham"
         style={{margin:"2px"}}
         rounded
         onToggle={(toggled) => {
           if (toggled) {
             // console.log(isClose);
-            setClose(true);
-          } else {
             setClose(false);
+          } else {
+            setClose(true);
             // console.log(isClose);
             // close a menu
           }
@@ -212,3 +227,5 @@ export default function Navbar() {
     </>
   );
 }
+
+

@@ -10,6 +10,8 @@ import {
   Legend,
 } from "recharts";
 
+import './MixedBarchart.css'
+
 export default function MixedBarchart() {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -104,7 +106,7 @@ export default function MixedBarchart() {
   ];
 
   return (
-    <div className="w-full flex justify-unset items-center flex-col" >
+    <div className="w-full flex justify-unset items-center flex-col" id="mixBar" >
       <h1 className="mt-10 mb-16 text-3xl font-medium text-center " >BarChart Representing the Number of Tasks and Tech Stack!</h1>
       <BarChart
         width={1100}
