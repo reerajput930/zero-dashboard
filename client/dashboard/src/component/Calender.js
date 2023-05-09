@@ -24,7 +24,7 @@ export const MyCalendar = () => {
   // to get the data
   useEffect(() => {
     async function fetchedData() {
-      await fetch("http://localhost:5000/api/events")
+      await fetch("https://mern-backend-cdsb.onrender.com/api/events")
         .then((response) => response.json())
         .then((data) => {
           setEvents(data.eventData);
@@ -58,7 +58,7 @@ export const MyCalendar = () => {
         console.log("updating info");
         console.log("editedEventDesc:", editedEventDesc);
         console.log(selectedEventInfo.extendedProps._id);
-        fetch(`http://localhost:5000/api/update_event`, {
+        fetch(`https://mern-backend-cdsb.onrender.com/api/update_event`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -113,7 +113,7 @@ export const MyCalendar = () => {
           },
         };
         console.log(eventData);
-        fetch("http://localhost:5000/api/events", {
+        fetch("https://mern-backend-cdsb.onrender.com/api/events", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -136,7 +136,7 @@ export const MyCalendar = () => {
   // for deleting data
   const handleEventDelete = (id) => {
     console.log(id);
-    fetch("http://localhost:5000/api/delete_event/", {
+    fetch("https://mern-backend-cdsb.onrender.com/api/delete_event/", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
