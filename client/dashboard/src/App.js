@@ -6,8 +6,8 @@ import Addtags from "./component/Addtags";
 import Piechart from "./component/charts/Piechart";
 import Barchart from "./component/charts/Barchart";
 import Navbar from "./component/Navbar";
-import Edit from "./component/Edit";
-import Calender from "./component/Calender";
+import EditPropress from "./component/EditProgress"
+import Calender from "./component/Calender"
 import MixBarchart from "./component/charts/MixedBarchart";
 import Contributers from "./component/Contributers";
 import Register from "./component/Register";
@@ -59,7 +59,7 @@ export default function App() {
         <Route path="/contributers" element={<Contributers />} />
         <Route path="/piechart" element={<Piechart />} />
         <Route path="/mixbarchart" element={<MixBarchart />} />
-        <Route path="/update" element={<Edit />} />
+        <Route path="/update" element={<EditPropress/>} />
         <Route path="/barchart" element={<Barchart />} />
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/tasks/createtask" element={<CreateTask />} />

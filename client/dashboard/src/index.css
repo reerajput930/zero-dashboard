@@ -41,6 +41,7 @@ body {
       hsl(0deg 100% 50%) 100%)
 }
 
+
 form input {
   width: -webkit-fill-available;
 }
@@ -56,6 +57,12 @@ form input {
 .userInfo-form{
   /* background-image: url("./icon/backgrounduserprofile.jpg"); */
 }
+
+.tags--block{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 
 
 @media screen and (max-width: 1230px) and (min-width: 400px) {
@@ -80,3 +87,4 @@ width: fit-content;
 
 
   }
+
