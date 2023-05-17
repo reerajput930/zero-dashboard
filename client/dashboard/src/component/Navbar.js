@@ -30,21 +30,7 @@ export default function Navbar() {
   const [isClose, setClose] = useState(false);
   //   const nothing = false
 
-  // function for highlight
-  function highlight(e, idName) {
-    e.preventDefault();
 
-    if (prev) {
-      document.querySelector(`#${prev}`).style.backgroundColor = null;
-      document.querySelector(`#${prev}`).style.color = null;
-    }
-
-    // style the current
-    document.querySelector(`#${idName}`).style.backgroundColor = "#1d4ed8";
-    document.querySelector(`#${idName}`).style.color = "white";
-
-    setPrev(idName);
-  }
 
   return (
     <>
@@ -154,7 +140,7 @@ export default function Navbar() {
                 <li
                   className="  mb-8 font-small text-lg  mt-1  hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px] rounded-md"
                   id="class3"
-                  //  onClick={(e)=> highlight(e,e.target.id)}
+                 
                 >
                   <FontAwesomeIcon className="mr-3" icon={faCalendar} />{" "}
                   Calender
@@ -169,7 +155,7 @@ export default function Navbar() {
                   className=" font-small text-lg mb-3 hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px]  rounded-md"
                   id="class4"
 
-                  // onClick={(e) => highlight(e, e.target.id)}
+               
                 >
                   <FontAwesomeIcon className="mr-3" icon={faChartBar} />{" "}
                   BarChart
@@ -180,7 +166,7 @@ export default function Navbar() {
                 <li
                   className=" font-small text-lg mb-3 mt-1  hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px]  rounded-md"
                   id="class5"
-                  // onClick={(e)=> highlight(e,e.target.id)}
+                
                 >
                   <img className="w-[22px] inline mr-3" src={img}></img>{" "}
                   PieChart
@@ -191,7 +177,7 @@ export default function Navbar() {
                 <li
                   className=" font-small text-lg mb-3    hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px] rounded-md"
                   id="class6"
-                  // onClick={(e)=> highlight(e,e.target.id)}
+                
                 >
                   <FontAwesomeIcon className="mr-3" icon={faChartBar} />{" "}
                   MixBarChart

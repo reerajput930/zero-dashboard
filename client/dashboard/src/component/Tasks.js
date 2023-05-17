@@ -102,6 +102,7 @@ export default function Tasks() {
   }
   console.log(storeTasks);
   storeTasks.tasks.map((task) => {
+ 
     console.log(task._id);
     tasks[task.category].push(
       <div
