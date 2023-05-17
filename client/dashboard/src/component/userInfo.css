@@ -5,11 +5,21 @@ flex-direction: column;
 align-items: center;
 }
 
-@media screen and (max-width: 1230px) and (min-width: 400px) {
+@media screen and (max-width: 1227px)  {
+
     .userInfo-form{
         display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width:45rem;
+    margin-left: 141px;
+}
+    label{
+font-size: x-large;
+    }
+    h1{
+        font-size: 2.5rem;
+
     }
 }
