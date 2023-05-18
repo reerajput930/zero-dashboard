@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import './MyCalender.css';
 
 
 export const MyCalendar = () => {
@@ -238,6 +239,7 @@ export const MyCalendar = () => {
           <Button
             variant="danger"
             className=" mr-2 delIcon"
+            style={{"color":"black"}}
             onClick={() =>
               handleEventDelete(selectedEventInfo.extendedProps._id)
             }
@@ -247,6 +249,7 @@ export const MyCalendar = () => {
           <Button
             type="button"
             className="btn btn-secondary"
+            style={{"color":"black"}}
             onClick={() => setShowEventInfo(false)}
           >
             Close{" "}
@@ -315,10 +318,14 @@ export const MyCalendar = () => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleModalClose}>
+          <Button variant="secondary"
+            style={{"color":"black"}}
+          onClick={handleModalClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleModalSubmit}>
+          <Button variant="primary" 
+          style={{"color":"black"}}
+          onClick={handleModalSubmit}>
             {editingMode ? "Save" : "Add Event"}
           </Button>
         </Modal.Footer>

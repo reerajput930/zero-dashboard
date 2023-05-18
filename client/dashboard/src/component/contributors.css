@@ -1,0 +1,25 @@
+
+.zero{
+    display: flex;
+}
+@media screen and (max-width: 699px)  {
+    .contMainDIV{
+ 
+        margin-left: -11rem;
+        
+    }
+    .Search-Bar{
+        width: 90%;
+    }
+    .cards--section
+    {
+        margin-top: 2rem;
+        display: flex;
+    flex-direction: column;
+    }
+    .user--card{
+        width:92%
+    }
+    
+    
+}
