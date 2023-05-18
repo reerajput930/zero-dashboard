@@ -30,21 +30,7 @@ export default function Navbar() {
   const [isClose, setClose] = useState(false);
   //   const nothing = false
 
-  // function for highlight
-  function highlight(e, idName) {
-    e.preventDefault();
 
-    if (prev) {
-      document.querySelector(`#${prev}`).style.backgroundColor = null;
-      document.querySelector(`#${prev}`).style.color = null;
-    }
-
-    // style the current
-    document.querySelector(`#${idName}`).style.backgroundColor = "#1d4ed8";
-    document.querySelector(`#${idName}`).style.color = "white";
-
-    setPrev(idName);
-  }
 
   return (
     <>
@@ -76,22 +62,23 @@ export default function Navbar() {
               <>
                 <div className="user--info">
                   <h4 className=" mt-16 mb-2 text-gray-400 ">USER PROFILE</h4>
-                  {console.log(user)}
-                  <li className=" font-small  mt-5 text-base m-4  mb-1 ">
-                    <Link to={"/userinfo"}>
-                      <span className="mr-2 cursor-pointer">
-                        {user.firstName}
-                      </span>
-                    </Link>
-                    <Link to={"/userinfo"}>
-                      <span className=" cursor-pointer">{user.lastName}</span>
-                    </Link>
-                  </li>
-
+                  {/* {console.log(user)} */}
                   <Link to={"/userinfo"}>
-                    <li className="cursor-pointer font-small text-base m-4 mt-0 ">
-                      {user.email}
-                    </li>
+                    <div className="hover:bg-[#e6effc] hover:text-black  rounded-md">
+                      <li className=" font-small  mt-5 text-base m-4  mb-1  hover:text-black  ">
+                        <span className="mr-2 cursor-pointer  hover:text-black">
+                          {user.firstName}
+                        </span>
+
+                        <span className=" cursor-pointer ">
+                          {user.lastName}
+                        </span>
+                      </li>
+
+                      <li className="cursor-pointer font-small text-base m-4 mt-0 hover:text-black ">
+                        {user.email}
+                      </li>
+                    </div>
                   </Link>
                 </div>
               </>
@@ -133,18 +120,18 @@ export default function Navbar() {
               </Link>
             </div>
 
-       
             <div className="growth">
-            <h4 className=" mt-5 mb-4 text-gray-400 ">PROGRESS REPORT</h4>
+              <h4 className=" mt-5 mb-4 text-gray-400 ">PROGRESS REPORT</h4>
 
-            <Link to={"/tasks"}>
-              <li
-                className=" font-small text-lg mb-8 m-0 mt-1  hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px] rounded-md"
-                id="class2"
-                
-              >
-                <FontAwesomeIcon className="mr-3" icon={faClipboard} /> Progress </li>
-            </Link>
+              <Link to={"/tasks"}>
+                <li
+                  className=" font-small text-lg mb-8 m-0 mt-1  hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px] rounded-md"
+                  id="class2"
+                >
+                  <FontAwesomeIcon className="mr-3" icon={faClipboard} />{" "}
+                  Progress{" "}
+                </li>
+              </Link>
             </div>
 
             <div className="calender">
@@ -153,7 +140,7 @@ export default function Navbar() {
                 <li
                   className="  mb-8 font-small text-lg  mt-1  hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px] rounded-md"
                   id="class3"
-                  //  onClick={(e)=> highlight(e,e.target.id)}
+                 
                 >
                   <FontAwesomeIcon className="mr-3" icon={faCalendar} />{" "}
                   Calender
@@ -168,7 +155,7 @@ export default function Navbar() {
                   className=" font-small text-lg mb-3 hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px]  rounded-md"
                   id="class4"
 
-                  // onClick={(e) => highlight(e, e.target.id)}
+               
                 >
                   <FontAwesomeIcon className="mr-3" icon={faChartBar} />{" "}
                   BarChart
@@ -179,7 +166,7 @@ export default function Navbar() {
                 <li
                   className=" font-small text-lg mb-3 mt-1  hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px]  rounded-md"
                   id="class5"
-                  // onClick={(e)=> highlight(e,e.target.id)}
+                
                 >
                   <img className="w-[22px] inline mr-3" src={img}></img>{" "}
                   PieChart
@@ -190,7 +177,7 @@ export default function Navbar() {
                 <li
                   className=" font-small text-lg mb-3    hover:bg-[#e6effc] hover:text-black pt-[14px] pb-[14px] pl-[15px] rounded-md"
                   id="class6"
-                  // onClick={(e)=> highlight(e,e.target.id)}
+                
                 >
                   <FontAwesomeIcon className="mr-3" icon={faChartBar} />{" "}
                   MixBarChart
