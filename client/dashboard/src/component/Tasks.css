@@ -82,15 +82,37 @@
 }
 
 
-@media screen and (max-width: 1230px) and (min-width: 400px) {
+@media screen and (max-width: 500px)  {
     
 
 .taskmanger--block {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
-    width: -webkit-fill-available;
-    margin-top: 97px;
+    width: fit-content;
+    margin-left: -8rem;
 }
+.tasks--detail{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.heading{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -4rem;
+}
+.task--block{
+width: 30rem;
+margin-left: -3rem;
+
+
+}
+
+
 }

@@ -1,114 +1,21 @@
-@media screen and (max-width: 1230px) and (min-width: 400px) {
-  .nav {
-    display: flex;
-    flex-direction: row;
-    width: -webkit-fill-available;
-    overflow: hidden;
-    margin-bottom: -68px;
-    height: 146px;
-  }
+.hamburger-react{
+  position: absolute;
 
-  .navbar--ul {
-    display: flex;
-  }
+}
 
-  .user--info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: -79px;
-  }
+@media screen and (max-width: 699px)  {
+ 
+  .nav{
+    position: sticky;
+   
 
-  .user--info li {
-    margin-top: 2px;
   }
-
   .zero {
     display: flex;
-    justify-content: center;
-    align-items: center;
   }
-
-  .dashboard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 10rem;
-    margin-top: -31px;
+  
+  .ham{
+    display: inline-block;
+    margin-top: 0rem;
   }
-
-  .dashboard a {
-    margin-top: -39px;
-  }
-
-  .dashboard li {
-    text-align: center;
-    margin-top: 17px;
-  }
-
-  .progress {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 17rem;
-    margin-top: -30px;
-  }
-
-  .progress a {
-    margin-top: -39px;
-  }
-
-  .progress li {
-    text-align: center;
-    margin-top: 17px;
-  }
-
-  .calender {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 14rem;
-    margin-top: -30px;
-  }
-
-  .calender a {
-    margin-top: -27px;
-  }
-
-  .charts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 13rem;
-    margin-top: 22px;
-  }
-
-  .bar {
-    margin-top: -26px;
-  }
-
-  .pie {
-    margin-top: -34px;
-  }
-
-  .mix {
-    margin-top: -34px;
-    margin-left: 36px;
-  }
-
-  .logout {
-    display: flex;
-    align-items: center;
-
-  }
-
-  .hamburger-react {
-    display: none;
-  }
-
 }
